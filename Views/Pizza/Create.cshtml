@@ -1,0 +1,45 @@
+﻿@model Pizza
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex align-items-center">
+
+                @*Title*@
+                <h1 class="mt-3 mb-3">Creazione nuova pizza</h1>
+            </div>
+
+            <form asp-controller="Pizza" asp-action="Create" method="post">
+
+                @*Name*@
+                <div class="mb-3">
+                    <strong>Nome:</strong>
+                    <input asp-for="Name" class="d-block w-100"/>
+                </div>
+
+                @*Description*@
+                <div class="mb-3">
+                    <strong>Descrizione:</strong>
+                    <textarea asp-for="Description" rows="10" class="d-block w-100"></textarea>
+                </div>
+
+                @*Image*@
+                <div class="mb-3">
+                    <strong>Immagine:</strong>
+                    <input asp-for="Image" class="d-block w-100"/>
+                </div>
+
+                @*Price*@
+                <div class="mb-3">
+                    <strong>Prezzo:</strong>
+                    <input asp-for="Price" class="d-block w-100"/>
+                </div>
+
+                @*Submit*@
+                <div class="text-end">
+                    <input type="submit" class="btn btn-small btn-success" value="Salva">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,5 @@ namespace la_mia_pizzeria_static.Data
             optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=db-pizzeria;Integrated Security=True;Encrypt=false;");
         }
     }
-
 }
 
