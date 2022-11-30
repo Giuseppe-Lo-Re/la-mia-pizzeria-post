@@ -20,6 +20,7 @@ else
             @foreach (Pizza pizza in Model)
             {
                 <tr>
+                    <td><a href="@Url.Action("Detail",new {id = pizza.Id})">@pizza.Id</a></td>
                     <td class="title">@pizza.Name</td>
                     <td class="description">
                         @pizza.Description
@@ -31,10 +32,12 @@ else
                         @pizza.Price euro
                     </td>
                     <td>
-                        <a class="btn btn-success">Dettagli</a>
+                        <a class="btn btn-info" asp-area="" asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id">Dettagli</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+}
+
 }
